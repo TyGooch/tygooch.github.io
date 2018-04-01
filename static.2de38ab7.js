@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -121,18 +121,6 @@ module.exports = require("prop-types");
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-move");
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-particles-js");
-
-/***/ }),
-/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -249,7 +237,7 @@ var cacheProm = exports.cacheProm = function cacheProm(pr, chunkName, props, pro
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 7 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -264,12 +252,6 @@ var _react = __webpack_require__(0);
 var _react2 = _interopRequireDefault(_react);
 
 var _reactStatic = __webpack_require__(1);
-
-var _reactParticlesJs = __webpack_require__(5);
-
-var _reactParticlesJs2 = _interopRequireDefault(_reactParticlesJs);
-
-var _reactMove = __webpack_require__(4);
 
 __webpack_require__(29);
 
@@ -319,7 +301,7 @@ exports.default = (0, _reactStatic.withSiteData)(function () {
 });
 
 /***/ }),
-/* 8 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -335,27 +317,12 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//
-
 exports.default = function () {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      'h1',
-      null,
-      'This is what we\'re all about.'
-    ),
-    _react2.default.createElement(
-      'p',
-      null,
-      'React, static sites, performance, speed. It\'s the stuff that makes us tick.'
-    )
-  );
+  return _react2.default.createElement('div', null);
 };
 
 /***/ }),
-/* 9 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -395,7 +362,7 @@ exports.default = (0, _reactStatic.withSiteData)(function () {
 });
 
 /***/ }),
-/* 10 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -730,7 +697,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 11 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -775,7 +742,7 @@ exports.default = (0, _reactStatic.withSiteData)(function () {
 });
 
 /***/ }),
-/* 12 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -804,7 +771,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 13 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -818,11 +785,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(14);
+var _reactDom = __webpack_require__(12);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(15);
+var _App = __webpack_require__(13);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -847,13 +814,13 @@ if (typeof document !== 'undefined') {
 }
 
 /***/ }),
-/* 14 */
+/* 12 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom");
 
 /***/ }),
-/* 15 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -863,29 +830,31 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
 var _reactStatic = __webpack_require__(1);
 
-var _d3Ease = __webpack_require__(16);
+var _d3Ease = __webpack_require__(14);
 
-var _reactMove = __webpack_require__(4);
+var _reactMove = __webpack_require__(15);
 
-var _recompose = __webpack_require__(17);
+var _recompose = __webpack_require__(16);
 
 var _propTypes = __webpack_require__(3);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactHotLoader = __webpack_require__(18);
+var _reactHotLoader = __webpack_require__(17);
 
-var _styledComponents = __webpack_require__(19);
+var _styledComponents = __webpack_require__(18);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _reactParticlesJs = __webpack_require__(5);
+var _reactParticlesJs = __webpack_require__(19);
 
 var _reactParticlesJs2 = _interopRequireDefault(_reactParticlesJs);
 
@@ -901,10 +870,16 @@ __webpack_require__(32);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// The magic :)
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 // import logoImage from './assets/personalLogoNew.svg'
+
+
+// The magic :)
 var AnimatedRoutes = (0, _recompose.getContext)({
   // We have to preserve the router context for each route
   // otherwise, a component may rerender with the wrong data
@@ -1028,145 +1003,194 @@ var AnimatedRoutes = (0, _recompose.getContext)({
   });
 });
 
-var App = function App() {
-  return _react2.default.createElement(
-    _reactStatic.Router,
-    null,
-    _react2.default.createElement(
-      'div',
-      { className: 'app-container' },
-      _react2.default.createElement(
-        'nav',
-        { className: 'header' },
+var App = function (_React$Component) {
+  _inherits(App, _React$Component);
+
+  function App() {
+    _classCallCheck(this, App);
+
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+
+    _this.state = {
+      isMobile: typeof window !== 'undefined' ? window.innerWidth <= 700 ? true : false : false
+    };
+    return _this;
+  }
+
+  _createClass(App, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (typeof window !== 'undefined') window.addEventListener("resize", this.handleResize.bind(this));
+    }
+  }, {
+    key: 'handleResize',
+    value: function handleResize() {
+      if (typeof window !== 'undefined') this.setState({ isMobile: window.innerWidth <= 700 ? true : false });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        _reactStatic.Router,
+        null,
         _react2.default.createElement(
-          _reactStatic.Link,
-          { to: '/', exact: true, activeClassName: 'header-logo-active', className: 'header-logo' },
-          _react2.default.createElement('img', { src: _logo2.default, alt: '' })
-        ),
-        _react2.default.createElement(
-          'nav',
-          { className: 'header-links' },
+          'div',
+          { className: 'app-container' },
           _react2.default.createElement(
-            _reactStatic.Prefetch,
-            { path: '/about' },
+            'nav',
+            { className: 'header' },
             _react2.default.createElement(
               _reactStatic.Link,
-              { to: '/about', className: 'header-link', activeStyle: { width: 'inherit', height: 'inherit' } },
+              { to: '/', exact: true, activeClassName: 'header-logo-active', className: 'header-logo' },
+              _react2.default.createElement('img', { src: _logo2.default, alt: '' })
+            ),
+            _react2.default.createElement(
+              'nav',
+              { className: 'header-links ' + (this.state.isMobile ? 'mobile' : null) },
               _react2.default.createElement(
-                'span',
-                { className: 'header-link-text' },
-                'ABOUT'
+                _reactStatic.Prefetch,
+                { path: '/about' },
+                _react2.default.createElement(
+                  _reactStatic.Link,
+                  { to: '/about', className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'header-link-text' },
+                    'ABOUT'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                _reactStatic.Prefetch,
+                { path: '/portfolio' },
+                _react2.default.createElement(
+                  _reactStatic.Link,
+                  { to: '/portfolio', className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'header-link-text' },
+                    'PORTFOLIO'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                _reactStatic.Prefetch,
+                { path: '/resume' },
+                _react2.default.createElement(
+                  _reactStatic.Link,
+                  { to: '/resume', className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'header-link-text' },
+                    'RESUME'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                _reactStatic.Prefetch,
+                { path: '/contact' },
+                _react2.default.createElement(
+                  _reactStatic.Link,
+                  { to: '/contact', className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'header-link-text' },
+                    'CONTACT'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement(
+                'nav',
+                { className: 'social-links' },
+                _react2.default.createElement(
+                  'a',
+                  { href: 'https://github.com/tygooch', className: 'social-link' },
+                  _react2.default.createElement('i', { className: 'fab fa-github' })
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: 'https://linkedin.com/in/tygooch', className: 'social-link' },
+                  _react2.default.createElement('i', { className: 'fab fa-linkedin-in' })
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { href: 'https://facebook.com/tybradleygooch', className: 'social-link' },
+                  _react2.default.createElement('i', { className: 'fab fa-facebook-f' })
+                )
               )
             )
           ),
+          _react2.default.createElement(_reactParticlesJs2.default, {
+            className: 'particles',
+            canvasClassName: 'particles-canvas',
+            width: '100vw',
+            height: '100vh',
+            style: {
+              width: '100vw',
+              height: '100vh',
+              position: 'fixed',
+              top: '0px',
+              left: '0px',
+              zIndex: -1,
+              opacity: 1
+            },
+            params: { "fps_limit": 60, "particles": { "number": { "value": typeof window !== 'undefined' ? window.innerWidth / 400 * 30 : 60, "density": { "enable": false, "value_area": 400 } }, "color": { "value": "#000000" }, "shape": { "type": "circle" }, "opacity": { "value": 0.5, "random": false }, "size": { "value": 1, "random": false }, "line_linked": { "enable": true, "distance": 224, "color": "#000000", "opacity": 0.5, "width": 0.32 }, "move": { "enable": true, "speed": 0.75, "direction": "none", "random": true, "straight": false, "out_mode": "bounce", "bounce": true, "attract": { "enable": false, "rotateX": -100, "rotateY": -100 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": false }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.66 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true }
+          }),
           _react2.default.createElement(
-            _reactStatic.Prefetch,
-            { path: '/portfolio' },
-            _react2.default.createElement(
-              _reactStatic.Link,
-              { to: '/portfolio', className: 'header-link', activeStyle: { width: 'inherit', height: 'inherit' } },
-              _react2.default.createElement(
-                'span',
-                { className: 'header-link-text' },
-                'PORTFOLIO'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            _reactStatic.Prefetch,
-            { path: '/resume' },
-            _react2.default.createElement(
-              _reactStatic.Link,
-              { to: '/resume', className: 'header-link', activeStyle: { width: 'inherit', height: 'inherit' } },
-              _react2.default.createElement(
-                'span',
-                { className: 'header-link-text' },
-                'RESUME'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            _reactStatic.Prefetch,
-            { path: '/contact' },
-            _react2.default.createElement(
-              _reactStatic.Link,
-              { to: '/contact', className: 'header-link', activeStyle: { width: 'inherit', height: 'inherit' } },
-              _react2.default.createElement(
-                'span',
-                { className: 'header-link-text' },
-                'CONTACT'
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'nav',
-          { className: 'social-links' },
-          _react2.default.createElement(
-            'a',
-            { href: 'https://github.com/tygooch', className: 'social-link' },
-            _react2.default.createElement('i', { className: 'fab fa-github' })
-          ),
-          _react2.default.createElement(
-            'a',
-            { href: 'https://linkedin.com/in/tygooch', className: 'social-link' },
-            _react2.default.createElement('i', { className: 'fab fa-linkedin-in' })
-          ),
-          _react2.default.createElement(
-            'a',
-            { href: 'https://facebook.com/tybradleygooch', className: 'social-link' },
-            _react2.default.createElement('i', { className: 'fab fa-facebook-f' })
+            'div',
+            { className: 'content', style: this.state.isMobile ? { height: 'calc(100% - 100px)', top: '100px' } : null },
+            _react2.default.createElement(_reactStaticRoutes2.default, { component: AnimatedRoutes })
           )
         )
-      ),
-      _react2.default.createElement(_reactParticlesJs2.default, {
-        className: 'particles',
-        style: {
-          width: '100vmin',
-          height: '100vh',
-          position: 'fixed',
-          top: '0px',
-          left: '0px',
-          zIndex: -1,
-          opacity: 1
-        },
-        params: { "fps_limit": 60, "particles": { "number": { "value": 60, "density": { "enable": false, "value_area": 5000 } }, "color": { "value": "#000000" }, "shape": { "type": "circle" }, "opacity": { "value": 1, "random": false }, "size": { "value": 2, "random": true }, "line_linked": { "enable": true, "distance": 224, "color": "#000000", "opacity": 0.75, "width": 0.32 }, "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.66 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true }
-      }),
-      _react2.default.createElement(
-        'div',
-        { className: 'content' },
-        _react2.default.createElement(_reactStaticRoutes2.default, { component: AnimatedRoutes })
-      )
-    )
-  );
-};
+      );
+    }
+  }]);
+
+  return App;
+}(_react2.default.Component);
 
 exports.default = (0, _reactHotLoader.hot)(module)(App);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)(module)))
 
 /***/ }),
-/* 16 */
+/* 14 */
 /***/ (function(module, exports) {
 
 module.exports = require("d3-ease");
 
 /***/ }),
-/* 17 */
+/* 15 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-move");
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = require("recompose");
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-hot-loader");
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = require("styled-components");
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-particles-js");
 
 /***/ }),
 /* 20 */
@@ -1235,7 +1259,7 @@ var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
   id: '../src/components/Home/Home',
   file: '/Users/tygooch/Documents/Projects/personal-site/personal-site/dist/react-static-routes.js',
   load: function load() {
-    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 7)), (0, _importCss3.default)('src/components/Home/Home', {
+    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 5)), (0, _importCss3.default)('src/components/Home/Home', {
       disableWarnings: true
     })]).then(function (proms) {
       return proms[0];
@@ -1245,7 +1269,7 @@ var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
     return _path3.default.join(__dirname, '../src/components/Home/Home');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(7);
+    return /*require.resolve*/(5);
   },
   chunkName: function chunkName() {
     return 'src/components/Home/Home';
@@ -1255,7 +1279,7 @@ var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
   id: '../src/components/About/About',
   file: '/Users/tygooch/Documents/Projects/personal-site/personal-site/dist/react-static-routes.js',
   load: function load() {
-    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 8)), (0, _importCss3.default)('src/components/About/About', {
+    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 6)), (0, _importCss3.default)('src/components/About/About', {
       disableWarnings: true
     })]).then(function (proms) {
       return proms[0];
@@ -1265,7 +1289,7 @@ var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
     return _path3.default.join(__dirname, '../src/components/About/About');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(8);
+    return /*require.resolve*/(6);
   },
   chunkName: function chunkName() {
     return 'src/components/About/About';
@@ -1275,7 +1299,7 @@ var t_2 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
   id: '../src/components/Portfolio/Portfolio',
   file: '/Users/tygooch/Documents/Projects/personal-site/personal-site/dist/react-static-routes.js',
   load: function load() {
-    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 9)), (0, _importCss3.default)('src/components/Portfolio/Portfolio', {
+    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 7)), (0, _importCss3.default)('src/components/Portfolio/Portfolio', {
       disableWarnings: true
     })]).then(function (proms) {
       return proms[0];
@@ -1285,7 +1309,7 @@ var t_2 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
     return _path3.default.join(__dirname, '../src/components/Portfolio/Portfolio');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(9);
+    return /*require.resolve*/(7);
   },
   chunkName: function chunkName() {
     return 'src/components/Portfolio/Portfolio';
@@ -1295,7 +1319,7 @@ var t_3 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
   id: '../src/components/Resume/Resume',
   file: '/Users/tygooch/Documents/Projects/personal-site/personal-site/dist/react-static-routes.js',
   load: function load() {
-    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 10)), (0, _importCss3.default)('src/components/Resume/Resume', {
+    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 8)), (0, _importCss3.default)('src/components/Resume/Resume', {
       disableWarnings: true
     })]).then(function (proms) {
       return proms[0];
@@ -1305,7 +1329,7 @@ var t_3 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
     return _path3.default.join(__dirname, '../src/components/Resume/Resume');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(10);
+    return /*require.resolve*/(8);
   },
   chunkName: function chunkName() {
     return 'src/components/Resume/Resume';
@@ -1315,7 +1339,7 @@ var t_4 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
   id: '../src/components/Contact/Contact',
   file: '/Users/tygooch/Documents/Projects/personal-site/personal-site/dist/react-static-routes.js',
   load: function load() {
-    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 11)), (0, _importCss3.default)('src/components/Contact/Contact', {
+    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 9)), (0, _importCss3.default)('src/components/Contact/Contact', {
       disableWarnings: true
     })]).then(function (proms) {
       return proms[0];
@@ -1325,7 +1349,7 @@ var t_4 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
     return _path3.default.join(__dirname, '../src/components/Contact/Contact');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(11);
+    return /*require.resolve*/(9);
   },
   chunkName: function chunkName() {
     return 'src/components/Contact/Contact';
@@ -1335,7 +1359,7 @@ var t_5 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
   id: '../src/components/404/404',
   file: '/Users/tygooch/Documents/Projects/personal-site/personal-site/dist/react-static-routes.js',
   load: function load() {
-    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 12)), (0, _importCss3.default)('src/components/404/404', {
+    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 10)), (0, _importCss3.default)('src/components/404/404', {
       disableWarnings: true
     })]).then(function (proms) {
       return proms[0];
@@ -1345,7 +1369,7 @@ var t_5 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
     return _path3.default.join(__dirname, '../src/components/404/404');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(12);
+    return /*require.resolve*/(10);
   },
   chunkName: function chunkName() {
     return 'src/components/404/404';
@@ -1506,7 +1530,7 @@ var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
 var _requireUniversalModule2 = _interopRequireDefault(_requireUniversalModule);
 
-var _utils = __webpack_require__(6);
+var _utils = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1808,7 +1832,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.clearChunks = exports.flushModuleIds = exports.flushChunkNames = exports.MODULE_IDS = exports.CHUNK_NAMES = undefined;
 exports.default = requireUniversalModule;
 
-var _utils = __webpack_require__(6);
+var _utils = __webpack_require__(4);
 
 var CHUNK_NAMES = exports.CHUNK_NAMES = new Set();
 var MODULE_IDS = exports.MODULE_IDS = new Set();
@@ -2073,4 +2097,4 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.5b8263a6.js.map
+//# sourceMappingURL=static.2de38ab7.js.map
