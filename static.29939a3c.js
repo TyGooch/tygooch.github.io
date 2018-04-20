@@ -341,7 +341,7 @@ exports.default = function () {
           { className: 'about-section-header-container', style: typeof window !== 'undefined' ? window.innerWidth < 950 ? null : { width: '170px' } : null },
           _react2.default.createElement(
             'div',
-            { style: typeof window !== 'undefined' ? window.innerWidth < 950 ? { float: 'left' } : { float: 'right' } : null },
+            { style: typeof window !== 'undefined' ? window.innerWidth < 950 ? { float: 'left', marginBottom: '10px' } : { float: 'right' } : null },
             'BACKGROUND'
           )
         ),
@@ -373,13 +373,13 @@ exports.default = function () {
           { className: 'about-section-header-container', style: typeof window !== 'undefined' ? window.innerWidth < 950 ? null : { width: '170px' } : null },
           _react2.default.createElement(
             'div',
-            { style: typeof window !== 'undefined' ? window.innerWidth < 950 ? { float: 'left' } : { float: 'right' } : null },
+            { style: typeof window !== 'undefined' ? window.innerWidth < 950 ? { float: 'left', marginBottom: '10px' } : { float: 'right' } : null },
             'SKILLS'
           )
         ),
         _react2.default.createElement(
           'div',
-          { className: 'about-section-text', style: typeof window !== 'undefined' ? window.innerWidth < 950 ? { width: '100%', fontSize: '16px' } : null : null },
+          { className: 'about-section-text', style: typeof window !== 'undefined' ? window.innerWidth < 950 ? { width: '100%', fontSize: '16px', justifyContent: 'center' } : null : null },
           _react2.default.createElement(
             'ul',
             { className: 'skills-content' },
@@ -400,6 +400,8 @@ exports.default = function () {
                   'JavaScript (ES6)',
                   _react2.default.createElement('br', null),
                   'Ruby',
+                  _react2.default.createElement('br', null),
+                  'Java',
                   _react2.default.createElement('br', null),
                   'HTML',
                   _react2.default.createElement('br', null),
@@ -433,11 +435,9 @@ exports.default = function () {
                 )
               )
             ),
-            typeof window !== 'undefined' ? window.innerWidth < 950 ? _react2.default.createElement('li', null) : null : null,
-            typeof window !== 'undefined' ? window.innerWidth < 950 ? _react2.default.createElement('li', null) : null : null,
             _react2.default.createElement(
               'li',
-              { className: 'skills-column', style: typeof window !== 'undefined' ? window.innerWidth < 950 ? { marginTop: '10px' } : null : null },
+              { className: 'skills-column', style: typeof window !== 'undefined' ? window.innerWidth < 530 ? { marginTop: '10px' } : null : null },
               _react2.default.createElement(
                 'div',
                 { className: 'skills-header' },
@@ -457,14 +457,13 @@ exports.default = function () {
                   _react2.default.createElement('br', null),
                   'Webpack',
                   _react2.default.createElement('br', null),
-                  'Chrome DevTools',
-                  _react2.default.createElement('br', null)
+                  'Chrome DevTools'
                 )
               )
             ),
             _react2.default.createElement(
               'li',
-              { className: 'skills-column', style: typeof window !== 'undefined' ? window.innerWidth < 950 ? { marginTop: '10px' } : null : null },
+              { className: 'skills-column', style: typeof window !== 'undefined' ? window.innerWidth < 646 ? { marginTop: '10px' } : {} : null },
               _react2.default.createElement(
                 'div',
                 { className: 'skills-header' },
@@ -480,9 +479,7 @@ exports.default = function () {
                   _react2.default.createElement('br', null),
                   'Sketch',
                   _react2.default.createElement('br', null),
-                  'Mapbox Studio',
-                  _react2.default.createElement('br', null),
-                  _react2.default.createElement('br', null)
+                  'Mapbox Studio'
                 )
               )
             )
@@ -2275,4 +2272,4 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.8e4b99ea.js.map
+//# sourceMappingURL=static.29939a3c.js.map
