@@ -1239,6 +1239,13 @@ var App = function (_React$Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       if (typeof window !== 'undefined') window.addEventListener("resize", this.handleResize.bind(this));
+
+      this.handleResize();
+    }
+  }, {
+    key: 'isMobile',
+    value: function isMobile() {
+      if (typeof window !== 'undefined') return window.innerWidth <= 700;
     }
   }, {
     key: 'handleResize',
@@ -1273,10 +1280,10 @@ var App = function (_React$Component) {
             ),
             _react2.default.createElement(
               'nav',
-              { className: 'header-links ' + (this.state.isMobile ? 'mobile' : null) },
+              { className: 'header-links', style: this.isMobile() ? { top: '64.5px', width: 'calc(100vw - 30px)', maxWidth: '600px', alignSelf: 'center', minWidth: '300px', paddingBottom: '6px', paddingLeft: '15px', paddingRight: '15px' } : null },
               _react2.default.createElement(
                 _reactStatic.Link,
-                { key: 0, to: { pathname: "/about" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
+                { key: 0, to: { pathname: "/about" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
                 _react2.default.createElement(
                   'span',
                   { className: 'header-link-text' },
@@ -1285,7 +1292,7 @@ var App = function (_React$Component) {
               ),
               _react2.default.createElement(
                 _reactStatic.Link,
-                { to: { pathname: "/portfolio" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
+                { to: { pathname: "/portfolio" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
                 _react2.default.createElement(
                   'span',
                   { className: 'header-link-text' },
@@ -1294,7 +1301,7 @@ var App = function (_React$Component) {
               ),
               _react2.default.createElement(
                 _reactStatic.Link,
-                { to: { pathname: "/resume" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
+                { to: { pathname: "/resume" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
                 _react2.default.createElement(
                   'span',
                   { className: 'header-link-text' },
@@ -1303,7 +1310,7 @@ var App = function (_React$Component) {
               ),
               _react2.default.createElement(
                 _reactStatic.Link,
-                { to: { pathname: "/contact" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
+                { to: { pathname: "/contact" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
                 _react2.default.createElement(
                   'span',
                   { className: 'header-link-text' },
@@ -1342,9 +1349,9 @@ var App = function (_React$Component) {
             height: '100vh',
             style: {
               width: '100vw',
-              height: this.state.isMobile ? 'calc(100% - 87px)' : 'calc(100% - 66px)',
+              height: this.isMobile() ? 'calc(100% - 87px)' : 'calc(100% - 66px)',
               position: 'fixed',
-              top: this.state.isMobile ? '87px' : '66px',
+              top: this.isMobile() ? '87px' : '66px',
               left: '0px',
               zIndex: -1,
               opacity: 1
@@ -1353,7 +1360,7 @@ var App = function (_React$Component) {
           }),
           _react2.default.createElement(
             'div',
-            { className: 'content', style: this.state.isMobile ? { top: '86px' } : null },
+            { className: 'content', style: this.isMobile() ? { top: '86px' } : null },
             _react2.default.createElement(_reactStaticRoutes2.default, { component: AnimatedRoutes })
           ),
           _react2.default.createElement('div', { className: 'scroll-fade-bottom' })
@@ -2405,4 +2412,4 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.49a28357.js.map
+//# sourceMappingURL=static.9ae0bd4d.js.map
