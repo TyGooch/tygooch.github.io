@@ -1265,82 +1265,6 @@ var App = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'app-container' },
-          _react2.default.createElement(
-            'nav',
-            { className: 'header' },
-            _react2.default.createElement(
-              _reactStatic.Link,
-              { to: { pathname: "/" }, exact: true, activeClassName: 'header-logo-active', className: 'header-logo' },
-              _react2.default.createElement('img', { src: _logo2.default, alt: '' })
-            ),
-            _react2.default.createElement(
-              'nav',
-              { className: 'header-links', style: this.isMobile() ? { top: '64.5px', width: 'calc(100vw - 30px)', maxWidth: '600px', alignSelf: 'center', minWidth: '300px', paddingBottom: '6px', paddingLeft: '15px', paddingRight: '15px' } : null },
-              _react2.default.createElement(
-                _reactStatic.Link,
-                { key: 0, to: { pathname: "/about" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
-                _react2.default.createElement(
-                  'span',
-                  { className: 'header-link-text' },
-                  'ABOUT'
-                )
-              ),
-              _react2.default.createElement(
-                _reactStatic.Prefetch,
-                { path: '/portfolio' },
-                _react2.default.createElement(
-                  _reactStatic.Link,
-                  { to: { pathname: "/portfolio" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'header-link-text' },
-                    'PORTFOLIO'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactStatic.Link,
-                { to: { pathname: "/resume" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
-                _react2.default.createElement(
-                  'span',
-                  { className: 'header-link-text' },
-                  'RESUME'
-                )
-              ),
-              _react2.default.createElement(
-                _reactStatic.Link,
-                { to: { pathname: "/contact" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
-                _react2.default.createElement(
-                  'span',
-                  { className: 'header-link-text' },
-                  'CONTACT'
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              null,
-              _react2.default.createElement(
-                'nav',
-                { className: 'social-links' },
-                _react2.default.createElement(
-                  'a',
-                  { href: 'https://github.com/tygooch', className: 'social-link' },
-                  _react2.default.createElement('i', { className: 'fab fa-github' })
-                ),
-                _react2.default.createElement(
-                  'a',
-                  { href: 'https://linkedin.com/in/tygooch', className: 'social-link' },
-                  _react2.default.createElement('i', { className: 'fab fa-linkedin-in' })
-                ),
-                _react2.default.createElement(
-                  'a',
-                  { href: 'https://facebook.com/tybradleygooch', className: 'social-link' },
-                  _react2.default.createElement('i', { className: 'fab fa-facebook-f' })
-                )
-              )
-            )
-          ),
           _react2.default.createElement(_reactParticlesJs2.default, {
             className: 'particles',
             canvasClassName: 'particles-canvas',
@@ -1359,7 +1283,83 @@ var App = function (_React$Component) {
           }),
           _react2.default.createElement(
             'div',
-            { className: 'content', style: this.isMobile() ? { marginTop: '86px' } : null },
+            { className: 'content', style: this.isMobile() ? { marginTop: null } : null },
+            _react2.default.createElement(
+              'nav',
+              { className: 'header', style: this.isMobile() ? { paddingBottom: '25px' } : null },
+              _react2.default.createElement(
+                _reactStatic.Link,
+                { to: { pathname: "/" }, exact: true, activeClassName: 'header-logo-active', className: 'header-logo' },
+                _react2.default.createElement('img', { src: _logo2.default, alt: '' })
+              ),
+              _react2.default.createElement(
+                'nav',
+                { className: 'header-links', style: this.isMobile() ? { top: '64.5px', width: 'calc(100vw - 30px)', maxWidth: '600px', alignSelf: 'center', minWidth: '300px', paddingBottom: '6px', paddingLeft: '15px', paddingRight: '15px' } : null },
+                _react2.default.createElement(
+                  _reactStatic.Link,
+                  { key: 0, to: { pathname: "/about" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'header-link-text' },
+                    'ABOUT'
+                  )
+                ),
+                _react2.default.createElement(
+                  _reactStatic.Prefetch,
+                  { path: '/portfolio' },
+                  _react2.default.createElement(
+                    _reactStatic.Link,
+                    { to: { pathname: "/portfolio" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'header-link-text' },
+                      'PORTFOLIO'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  _reactStatic.Link,
+                  { to: { pathname: "/resume" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'header-link-text' },
+                    'RESUME'
+                  )
+                ),
+                _react2.default.createElement(
+                  _reactStatic.Link,
+                  { to: { pathname: "/contact" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'header-link-text' },
+                    'CONTACT'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'nav',
+                  { className: 'social-links' },
+                  _react2.default.createElement(
+                    'a',
+                    { href: 'https://github.com/tygooch', className: 'social-link' },
+                    _react2.default.createElement('i', { className: 'fab fa-github' })
+                  ),
+                  _react2.default.createElement(
+                    'a',
+                    { href: 'https://linkedin.com/in/tygooch', className: 'social-link' },
+                    _react2.default.createElement('i', { className: 'fab fa-linkedin-in' })
+                  ),
+                  _react2.default.createElement(
+                    'a',
+                    { href: 'https://facebook.com/tybradleygooch', className: 'social-link' },
+                    _react2.default.createElement('i', { className: 'fab fa-facebook-f' })
+                  )
+                )
+              )
+            ),
             _react2.default.createElement(_reactStaticRoutes2.default, { component: AnimatedRoutes })
           ),
           _react2.default.createElement('div', { className: 'scroll-fade-bottom' })
@@ -2360,4 +2360,4 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.f672b55d.js.map
+//# sourceMappingURL=static.67e37b0c.js.map
