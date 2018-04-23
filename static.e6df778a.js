@@ -1353,7 +1353,7 @@ var App = function (_React$Component) {
           }),
           _react2.default.createElement(
             'div',
-            { className: 'content', style: this.state.isMobile ? { paddingTop: '87px' } : null },
+            { className: 'content', style: this.state.isMobile ? { paddingTop: '86px' } : null },
             _react2.default.createElement(_reactStaticRoutes2.default, { component: AnimatedRoutes })
           ),
           _react2.default.createElement('div', { className: 'scroll-fade-bottom' })
@@ -2405,4 +2405,4 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.4ac51b88.js.map
+//# sourceMappingURL=static.e6df778a.js.map
