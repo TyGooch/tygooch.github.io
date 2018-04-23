@@ -1096,6 +1096,38 @@ var AnimatedRoutes = (0, _recompose.getContext)({
           )
         );
       }
+      // console.log('path');
+      // console.log(props.location.pathname);
+      // let pathIndex
+      // if(props.location.pathname === '/home')
+      //   pathIndex = 0
+      // if(props.location.pathname === '/about')
+      //   pathIndex = 1
+      // if(props.location.pathname === '/portfolio')
+      //   pathIndex = 2
+      // if(props.location.pathname === '/resume')
+      //   pathIndex = 3
+      // if(props.location.pathname === '/contact')
+      //   pathIndex = 4
+      //
+      // console.log(pathIndex);
+      // console.log('prevpath');
+      //
+      // console.log(props.location.state.prevPath);
+      // let prevPathIndex
+      // if(props.location.state.prevPath === '/home')
+      //   prevPathIndex = 0
+      // if(props.location.state.prevPath === '/about')
+      //   prevPathIndex = 1
+      // if(props.location.state.prevPath === '/portfolio')
+      //   prevPathIndex = 2
+      // if(props.location.state.prevPath === '/resume')
+      //   prevPathIndex = 3
+      // if(props.location.state.prevPath === '/contact')
+      //   prevPathIndex = 4
+      //
+      // console.log(prevPathIndex);
+      // console.log('===========');
 
       // Use React-Move to animate the different components coming in and out
       return _react2.default.createElement(
@@ -1112,30 +1144,30 @@ var AnimatedRoutes = (0, _recompose.getContext)({
           keyAccessor: function keyAccessor(d) {
             return d.id;
           },
-          start: function start() {
+          start: function start(data) {
             return {
-              opacity: [0],
-              scale: 1,
-              translateY: ['100%']
+              opacity: [0]
+              // translateY: [`100vh`],
             };
           },
           enter: function enter() {
             return {
               opacity: [1],
-              translateY: ['0%'],
-              timing: { duration: 325, delay: 325 }
+              translateY: ['0px'],
+              timing: { duration: 650, delay: 650 }
             };
           },
           update: function update() {
             return {
               opacity: [1]
+              // translateY: ['100%']
             };
           },
-          leave: function leave() {
+          leave: function leave(data) {
             return {
               opacity: [0],
-              translateY: ['100%'],
-              timing: { duration: 325 }
+              // translateY: [`100vh`],
+              timing: { duration: 650 }
             };
           }
         },
@@ -1167,15 +1199,15 @@ var AnimatedRoutes = (0, _recompose.getContext)({
                 {
                   key: key,
                   style: {
-                    position: 'absolute',
+                    position: 'relative',
                     top: 0,
                     right: 0,
                     bottom: 0,
                     left: 0,
                     transform: 'translateY(' + translateY + ')',
                     opacity: opacity,
-                    height: '100%',
-                    width: '100%'
+                    height: '100%'
+                    // width: '100%',
                   }
                 },
                 _react2.default.createElement(data.Comp, data.props)
@@ -1197,7 +1229,8 @@ var App = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
     _this.state = {
-      isMobile: typeof window !== 'undefined' ? window.innerWidth <= 700 ? true : false : false
+      isMobile: typeof window !== 'undefined' ? window.innerWidth <= 700 ? true : false : false,
+      prevPath: 'poop'
     };
     return _this;
   }
@@ -1206,12 +1239,6 @@ var App = function (_React$Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       if (typeof window !== 'undefined') window.addEventListener("resize", this.handleResize.bind(this));
-      console.log('MOUNT');
-    }
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate() {
-      console.log('pUPDATE22');
     }
   }, {
     key: 'handleResize',
@@ -1219,11 +1246,20 @@ var App = function (_React$Component) {
       if (typeof window !== 'undefined') this.setState({ isMobile: window.innerWidth <= 700 ? true : false });
     }
   }, {
+    key: 'getPathIndex',
+    value: function getPathIndex(path) {
+      if (path === '/home') return 0;
+      if (path === '/about') return 1;
+      if (path === '/portfolio') return 2;
+      if (path === '/resume') return 3;
+      if (path === '/contact') return 4;
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         _reactStatic.Router,
-        { type: _reactStatic.browser },
+        { type: 'browser' },
         _react2.default.createElement(
           'div',
           { className: 'app-container' },
@@ -1232,7 +1268,7 @@ var App = function (_React$Component) {
             { className: 'header' },
             _react2.default.createElement(
               _reactStatic.Link,
-              { to: '/', exact: true, activeClassName: 'header-logo-active', className: 'header-logo' },
+              { to: { pathname: "/" }, exact: true, activeClassName: 'header-logo-active', className: 'header-logo' },
               _react2.default.createElement('img', { src: _logo2.default, alt: '' })
             ),
             _react2.default.createElement(
@@ -1240,7 +1276,7 @@ var App = function (_React$Component) {
               { className: 'header-links ' + (this.state.isMobile ? 'mobile' : null) },
               _react2.default.createElement(
                 _reactStatic.Link,
-                { to: '/about', className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
+                { key: 0, to: { pathname: "/about" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
                 _react2.default.createElement(
                   'span',
                   { className: 'header-link-text' },
@@ -1249,7 +1285,7 @@ var App = function (_React$Component) {
               ),
               _react2.default.createElement(
                 _reactStatic.Link,
-                { to: '/portfolio', className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
+                { to: { pathname: "/portfolio" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
                 _react2.default.createElement(
                   'span',
                   { className: 'header-link-text' },
@@ -1258,7 +1294,7 @@ var App = function (_React$Component) {
               ),
               _react2.default.createElement(
                 _reactStatic.Link,
-                { to: '/resume', className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
+                { to: { pathname: "/resume" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
                 _react2.default.createElement(
                   'span',
                   { className: 'header-link-text' },
@@ -1267,7 +1303,7 @@ var App = function (_React$Component) {
               ),
               _react2.default.createElement(
                 _reactStatic.Link,
-                { to: '/contact', className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
+                { to: { pathname: "/contact" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.state.isMobile ? '0px' : '0px' } },
                 _react2.default.createElement(
                   'span',
                   { className: 'header-link-text' },
@@ -2369,4 +2405,4 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.7c79d2f6.js.map
+//# sourceMappingURL=static.4ac51b88.js.map
