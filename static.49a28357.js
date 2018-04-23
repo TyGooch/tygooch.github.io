@@ -1174,7 +1174,7 @@ var AnimatedRoutes = (0, _recompose.getContext)({
         function (nodes) {
           return _react2.default.createElement(
             'div',
-            { style: { position: 'relative', height: '100%', width: '100%' } },
+            { style: { position: 'relative', height: 'inherit', width: '100%' } },
             nodes.map(function (_ref2) {
               var key = _ref2.key,
                   data = _ref2.data,
@@ -1205,8 +1205,8 @@ var AnimatedRoutes = (0, _recompose.getContext)({
                     bottom: 0,
                     left: 0,
                     transform: 'translateY(' + translateY + ')',
-                    opacity: opacity,
-                    height: '100%'
+                    opacity: opacity
+                    // height: '100%',
                     // width: '100%',
                   }
                 },
@@ -1353,7 +1353,7 @@ var App = function (_React$Component) {
           }),
           _react2.default.createElement(
             'div',
-            { className: 'content', style: this.state.isMobile ? { paddingTop: '86px' } : null },
+            { className: 'content', style: this.state.isMobile ? { top: '86px' } : null },
             _react2.default.createElement(_reactStaticRoutes2.default, { component: AnimatedRoutes })
           ),
           _react2.default.createElement('div', { className: 'scroll-fade-bottom' })
@@ -2405,4 +2405,4 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.e6df778a.js.map
+//# sourceMappingURL=static.49a28357.js.map
