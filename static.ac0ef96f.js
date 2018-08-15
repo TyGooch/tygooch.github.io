@@ -1268,7 +1268,7 @@ var App = function (_React$Component) {
     value: function componentDidMount() {
       if (typeof window !== 'undefined') window.addEventListener("resize", this.handleResize.bind(this));
 
-      this.setState({ isMobile: window.innerWidth <= 700 ? true : false });
+      // this.setState({isMobile: window.innerWidth <= 700 ? true : false})
     }
   }, {
     key: 'isMobile',
@@ -1298,111 +1298,115 @@ var App = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        _reactStatic.Router,
-        { type: 'browser' },
+        'div',
+        null,
         _react2.default.createElement(
-          'div',
-          { className: 'app-container' },
-          _react2.default.createElement(_reactParticlesJs2.default, {
-            className: 'particles',
-            canvasClassName: 'particles-canvas',
-            width: '100vw',
-            height: '100vh',
-            style: {
-              width: '100vw',
-              height: this.isMobile() ? 'calc(100vh - 87px)' : 'calc(100vh - 87.5px)',
-              position: 'fixed',
-              top: this.isMobile() ? '87px' : '87.5px',
-              bottom: 0,
-              left: '0px',
-              zIndex: -1,
-              opacity: 1
-            },
-            params: { "fps_limit": 60, "particles": { "number": { "value": typeof window !== 'undefined' ? window.innerWidth / 400 * 30 : 60, "density": { "enable": false, "value_area": 400 } }, "color": { "value": "#000000" }, "shape": { "type": "circle" }, "opacity": { "value": 0.1, "random": false }, "size": { "value": 0.1, "random": false }, "line_linked": { "enable": true, "distance": 224, "color": "#000000", "opacity": 0.5, "width": 0.32 }, "move": { "enable": true, "speed": 0.75, "direction": "none", "random": true, "straight": false, "out_mode": "bounce", "bounce": true, "attract": { "enable": false, "rotateX": -100, "rotateY": -100 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": false }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.66 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true }
-          }),
+          _reactStatic.Router,
+          { type: 'browser' },
           _react2.default.createElement(
             'div',
-            { className: 'content' },
+            { className: 'app-container' },
             _react2.default.createElement(
-              'nav',
-              { className: 'header', style: this.isMobile() ? { paddingBottom: '25px' } : null },
-              _react2.default.createElement(
-                _reactStatic.Link,
-                { to: { pathname: "/" }, exact: true, activeClassName: 'header-logo-active', className: 'header-logo' },
-                _react2.default.createElement('img', { src: _logo2.default, alt: '' })
-              ),
+              'div',
+              { className: 'content' },
               _react2.default.createElement(
                 'nav',
-                { className: 'header-links' + (this.isMobile() ? ' mobile' : '') },
+                { className: 'header', style: this.isMobile() ? { paddingBottom: '25px' } : null },
                 _react2.default.createElement(
                   _reactStatic.Link,
-                  { key: 0, to: { pathname: "/about" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'header-link-text' },
-                    'ABOUT'
-                  )
+                  { to: { pathname: "/" }, exact: true, activeClassName: 'header-logo-active', className: 'header-logo' },
+                  _react2.default.createElement('img', { src: _logo2.default, alt: '' })
                 ),
                 _react2.default.createElement(
-                  _reactStatic.Prefetch,
-                  { path: '/portfolio' },
+                  'nav',
+                  { className: 'header-links' + (this.isMobile() ? ' mobile' : '') },
                   _react2.default.createElement(
                     _reactStatic.Link,
-                    { to: { pathname: "/portfolio" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
+                    { key: 0, to: { pathname: "/about" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
                     _react2.default.createElement(
                       'span',
                       { className: 'header-link-text' },
-                      'PORTFOLIO'
+                      'ABOUT'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _reactStatic.Prefetch,
+                    { path: '/portfolio' },
+                    _react2.default.createElement(
+                      _reactStatic.Link,
+                      { to: { pathname: "/portfolio" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
+                      _react2.default.createElement(
+                        'span',
+                        { className: 'header-link-text' },
+                        'PORTFOLIO'
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _reactStatic.Link,
+                    { to: { pathname: "/resume" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'header-link-text' },
+                      'RESUME'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _reactStatic.Link,
+                    { to: { pathname: "/contact" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'header-link-text' },
+                      'CONTACT'
                     )
                   )
                 ),
                 _react2.default.createElement(
-                  _reactStatic.Link,
-                  { to: { pathname: "/resume" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
+                  'div',
+                  null,
                   _react2.default.createElement(
-                    'span',
-                    { className: 'header-link-text' },
-                    'RESUME'
-                  )
-                ),
-                _react2.default.createElement(
-                  _reactStatic.Link,
-                  { to: { pathname: "/contact" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'header-link-text' },
-                    'CONTACT'
+                    'nav',
+                    { className: 'social-links' },
+                    _react2.default.createElement(
+                      'a',
+                      { href: 'https://github.com/tygooch', className: 'social-link' },
+                      _react2.default.createElement('i', { className: 'fab fa-github' })
+                    ),
+                    _react2.default.createElement(
+                      'a',
+                      { href: 'https://linkedin.com/in/tygooch', className: 'social-link' },
+                      _react2.default.createElement('i', { className: 'fab fa-linkedin-in' })
+                    ),
+                    _react2.default.createElement(
+                      'a',
+                      { href: 'https://facebook.com/tybradleygooch', className: 'social-link' },
+                      _react2.default.createElement('i', { className: 'fab fa-facebook-f' })
+                    )
                   )
                 )
               ),
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'nav',
-                  { className: 'social-links' },
-                  _react2.default.createElement(
-                    'a',
-                    { href: 'https://github.com/tygooch', className: 'social-link' },
-                    _react2.default.createElement('i', { className: 'fab fa-github' })
-                  ),
-                  _react2.default.createElement(
-                    'a',
-                    { href: 'https://linkedin.com/in/tygooch', className: 'social-link' },
-                    _react2.default.createElement('i', { className: 'fab fa-linkedin-in' })
-                  ),
-                  _react2.default.createElement(
-                    'a',
-                    { href: 'https://facebook.com/tybradleygooch', className: 'social-link' },
-                    _react2.default.createElement('i', { className: 'fab fa-facebook-f' })
-                  )
-                )
-              )
+              _react2.default.createElement(_reactStaticRoutes2.default, { component: AnimatedRoutes })
             ),
-            _react2.default.createElement(_reactStaticRoutes2.default, { component: AnimatedRoutes })
-          ),
-          _react2.default.createElement('div', { className: 'scroll-fade-bottom' })
-        )
+            _react2.default.createElement('div', { className: 'scroll-fade-bottom' })
+          )
+        ),
+        _react2.default.createElement(_reactParticlesJs2.default, {
+          className: 'particles',
+          canvasClassName: 'particles-canvas',
+          width: '100vw',
+          height: '100vh',
+          style: {
+            width: '100vw',
+            height: typeof window !== 'undefined' && window.innerWidth <= 700 ? 'calc(100vh - 87px)' : 'calc(100vh - 87.5px)',
+            position: 'fixed',
+            top: typeof window !== 'undefined' && window.innerWidth <= 700 ? '87px' : '87.5px',
+            bottom: 0,
+            left: '0px',
+            zIndex: -1,
+            opacity: 1
+          },
+          params: { "fps_limit": 60, "particles": { "number": { "value": typeof window !== 'undefined' ? window.innerWidth / 400 * 30 : 60, "density": { "enable": false, "value_area": 400 } }, "color": { "value": "#000000" }, "shape": { "type": "circle" }, "opacity": { "value": 0.1, "random": false }, "size": { "value": 0.1, "random": false }, "line_linked": { "enable": true, "distance": 224, "color": "#000000", "opacity": 0.5, "width": 0.32 }, "move": { "enable": true, "speed": 0.75, "direction": "none", "random": true, "straight": false, "out_mode": "bounce", "bounce": true, "attract": { "enable": false, "rotateX": -100, "rotateY": -100 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": false }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.66 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true }
+        })
       );
     }
   }]);
@@ -2431,4 +2435,4 @@ exports.push([module.i, "body{font-family:Roboto,sans-serif;font-weight:300;font
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.c461b2a0.js.map
+//# sourceMappingURL=static.ac0ef96f.js.map
