@@ -1268,7 +1268,7 @@ var App = function (_React$Component) {
     value: function componentDidMount() {
       if (typeof window !== 'undefined') window.addEventListener("resize", this.handleResize.bind(this));
 
-      this.handleResize();
+      this.setState({ isMobile: window.innerWidth <= 700 ? true : false });
     }
   }, {
     key: 'isMobile',
@@ -1280,15 +1280,20 @@ var App = function (_React$Component) {
     value: function handleResize() {
       if (typeof window !== 'undefined') this.setState({ isMobile: window.innerWidth <= 700 ? true : false });
     }
-  }, {
-    key: 'getPathIndex',
-    value: function getPathIndex(path) {
-      if (path === '/home') return 0;
-      if (path === '/about') return 1;
-      if (path === '/portfolio') return 2;
-      if (path === '/resume') return 3;
-      if (path === '/contact') return 4;
-    }
+
+    // getPathIndex(path) {
+    //   if(path === '/home')
+    //     return 0
+    //   if(path === '/about')
+    //     return 1
+    //   if(path === '/portfolio')
+    //     return 2
+    //   if(path === '/resume')
+    //     return 3
+    //   if(path === '/contact')
+    //     return 4
+    // }
+
   }, {
     key: 'render',
     value: function render() {
@@ -1317,10 +1322,10 @@ var App = function (_React$Component) {
           }),
           _react2.default.createElement(
             'div',
-            { className: 'content', style: typeof window !== 'undefined' && window.innerWidth <= 700 ? { marginTop: null } : null },
+            { className: 'content' },
             _react2.default.createElement(
               'nav',
-              { className: 'header', style: typeof window !== 'undefined' && window.innerWidth <= 700 ? { paddingBottom: '25px' } : null },
+              { className: 'header', style: this.isMobile() ? { paddingBottom: '25px' } : null },
               _react2.default.createElement(
                 _reactStatic.Link,
                 { to: { pathname: "/" }, exact: true, activeClassName: 'header-logo-active', className: 'header-logo' },
@@ -1328,10 +1333,10 @@ var App = function (_React$Component) {
               ),
               _react2.default.createElement(
                 'nav',
-                { className: 'header-links', style: typeof window !== 'undefined' && window.innerWidth <= 700 ? { top: '64.5px', width: 'calc(100vw - 30px)', maxWidth: '600px', alignSelf: 'center', minWidth: '300px', paddingBottom: '6px', paddingLeft: '15px', paddingRight: '15px' } : null },
+                { className: 'header-links' + (this.isMobile() ? ' mobile' : '') },
                 _react2.default.createElement(
                   _reactStatic.Link,
-                  { key: 0, to: { pathname: "/about" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: typeof window !== 'undefined' && window.innerWidth <= 700 ? '0px' : '0px' } },
+                  { key: 0, to: { pathname: "/about" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
                   _react2.default.createElement(
                     'span',
                     { className: 'header-link-text' },
@@ -1343,7 +1348,7 @@ var App = function (_React$Component) {
                   { path: '/portfolio' },
                   _react2.default.createElement(
                     _reactStatic.Link,
-                    { to: { pathname: "/portfolio" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: typeof window !== 'undefined' && window.innerWidth <= 700 ? '0px' : '0px' } },
+                    { to: { pathname: "/portfolio" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
                     _react2.default.createElement(
                       'span',
                       { className: 'header-link-text' },
@@ -1353,7 +1358,7 @@ var App = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                   _reactStatic.Link,
-                  { to: { pathname: "/resume" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: typeof window !== 'undefined' && window.innerWidth <= 700 ? '0px' : '0px' } },
+                  { to: { pathname: "/resume" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
                   _react2.default.createElement(
                     'span',
                     { className: 'header-link-text' },
@@ -1362,7 +1367,7 @@ var App = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                   _reactStatic.Link,
-                  { to: { pathname: "/contact" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: typeof window !== 'undefined' && window.innerWidth <= 700 ? '0px' : '0px' } },
+                  { to: { pathname: "/contact" }, className: 'header-link', activeStyle: { width: 'auto', height: 'inherit' }, style: { marginRight: this.isMobile() ? '0px' : '0px' } },
                   _react2.default.createElement(
                     'span',
                     { className: 'header-link-text' },
@@ -2418,7 +2423,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "body{font-family:Roboto,sans-serif;font-weight:300;font-size:16px;color:#000;background-color:#fff}body,h1{margin:0;padding:0}a{text-decoration:none;color:#000}nav{position:-webkit-sticky;position:sticky;top:0;right:0;background:#fff;z-index:10000000}#root{height:100%}.app-container{height:auto;width:100%;position:relative}.header{width:100%;height:60px;padding:0;margin:0;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;position:static;top:0;left:0;right:0;padding-bottom:7.5px}.header-logo img{height:55px;width:125px;max-width:27.5vw;margin-top:5px;margin-left:15px}.header-logo:hover{opacity:.5}.header-logo-active:hover{opacity:1;cursor:default}.header-links{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between;position:absolute;top:42px;bottom:0;height:1em;margin-left:auto;margin-right:auto;left:0;right:0;width:calc(100% - 55vw);min-width:400px;text-align:center}.header-links.mobile{position:absolute;top:64.5px;width:calc(100vw - 30px);max-width:600px;-ms-flex-item-align:center;align-self:center;min-width:300px;padding-bottom:6px;padding-left:15px;padding-right:15px}.menu-icon{display:none;position:relative;bottom:.3em;font-size:150%}.header-link{position:relative;bottom:2px;font-weight:500;font-size:18px;color:#000}.header-link.active{color:#cf000f;-webkit-transition:color .75s linear;-o-transition:color .75s linear;transition:color .75s linear}.header-link.active:hover{opacity:1;cursor:default}.header-link:after{background-color:#000}.header-link:after,.header-link:before{content:\"\";position:absolute;width:100%;height:4px;bottom:-8px;left:0;visibility:hidden;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transition:all .325s ease-in-out 0s;-o-transition:all .325s ease-in-out 0s;transition:all .325s ease-in-out 0s}.header-link:before{background-color:#cf000f}.header-link.active:after{width:100%;-webkit-transition:all .325s ease-in-out .325s;-o-transition:all .325s ease-in-out .325s;transition:all .325s ease-in-out .325s;background-color:#000}.header-link.active:after,.header-link.active:before,.header-link:hover:before{visibility:visible;-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1)}.social-links{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between;height:55px;max-height:55px;margin-top:5px;margin-right:15px;width:125px;max-width:27.5vw;-webkit-box-sizing:border-box;box-sizing:border-box;position:absolute;right:0}.social-link{color:#000;padding-bottom:10%;display:inline-block;height:auto;position:relative;padding-top:23.5%}.social-link:hover{cursor:pointer}.social-link i{position:relative;display:inline-block;font-size:25px;line-height:25px;height:inherit;text-align:center}.content{top:0;padding:0;width:auto;height:auto;overflow:visible;z-index:1}.content,.header:after{position:absolute;left:0;right:0}.header:after{top:100%;content:\"\";margin-top:inherit;height:25px;width:inherit;background:-webkit-gradient(linear,left top,left bottom,from(#fff),to(hsla(0,0%,100%,0)));background:-webkit-linear-gradient(top,#fff,hsla(0,0%,100%,0));background:-o-linear-gradient(top,#fff 0,hsla(0,0%,100%,0) 100%);background:linear-gradient(180deg,#fff 0,hsla(0,0%,100%,0));z-index:10000}.scroll-fade-bottom{position:fixed;content:\"\";bottom:0;height:15px;width:100%;background:-webkit-gradient(linear,left top,left bottom,from(hsla(0,0%,100%,0)),to(#fff));background:-webkit-linear-gradient(top,hsla(0,0%,100%,0),#fff);background:-o-linear-gradient(top,hsla(0,0%,100%,0) 0,#fff 100%);background:linear-gradient(180deg,hsla(0,0%,100%,0) 0,#fff);z-index:1;display:none}.particles-canvas{position:absolute;top:0;bottom:0;left:0;right:0;z-index:-1;max-height:calc(100vh - 87.5px)}", ""]);
+exports.push([module.i, "body{font-family:Roboto,sans-serif;font-weight:300;font-size:16px;color:#000;background-color:#fff}body,h1{margin:0;padding:0}a{text-decoration:none;color:#000}nav{position:-webkit-sticky;position:sticky;top:0;right:0;background:#fff;z-index:10000000}#root{height:100%}.app-container{height:auto;width:100%;position:relative}.header{width:100%;height:60px;padding:0;margin:0;display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;position:static;top:0;left:0;right:0;padding-bottom:7.5px}.header-logo img{height:55px;width:125px;max-width:27.5vw;margin-top:5px;margin-left:15px}.header-logo:hover{opacity:.5}.header-logo-active:hover{opacity:1;cursor:default}.header-links{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between;position:absolute;top:42px;bottom:0;height:1em;margin-left:auto;margin-right:auto;left:0;right:0;width:calc(100% - 55vw);min-width:400px;text-align:center}.header-links.mobile{top:64.5px;width:calc(100% - 30px);max-width:600px;-ms-flex-item-align:center;align-self:center;min-width:300px;padding-bottom:6px;padding-left:15px;padding-right:15px}.menu-icon{display:none;position:relative;bottom:.3em;font-size:150%}.header-link{position:relative;bottom:2px;font-weight:500;font-size:18px;color:#000}.header-link.active{color:#cf000f;-webkit-transition:color .75s linear;-o-transition:color .75s linear;transition:color .75s linear}.header-link.active:hover{opacity:1;cursor:default}.header-link:after{background-color:#000}.header-link:after,.header-link:before{content:\"\";position:absolute;width:100%;height:4px;bottom:-8px;left:0;visibility:hidden;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transition:all .325s ease-in-out 0s;-o-transition:all .325s ease-in-out 0s;transition:all .325s ease-in-out 0s}.header-link:before{background-color:#cf000f}.header-link.active:after{width:100%;-webkit-transition:all .325s ease-in-out .325s;-o-transition:all .325s ease-in-out .325s;transition:all .325s ease-in-out .325s;background-color:#000}.header-link.active:after,.header-link.active:before,.header-link:hover:before{visibility:visible;-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1)}.social-links{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between;height:55px;max-height:55px;margin-top:5px;margin-right:15px;width:125px;max-width:27.5vw;-webkit-box-sizing:border-box;box-sizing:border-box;position:absolute;right:0}.social-link{color:#000;padding-bottom:10%;display:inline-block;height:auto;position:relative;padding-top:23.5%}.social-link:hover{cursor:pointer}.social-link i{position:relative;display:inline-block;font-size:25px;line-height:25px;height:inherit;text-align:center}.content{position:relative;left:0;right:0;top:0;padding:0;width:auto;height:auto;overflow:visible;z-index:1}.header:after{position:absolute;top:100%;content:\"\";margin-top:inherit;left:0;right:0;height:25px;width:inherit;background:-webkit-gradient(linear,left top,left bottom,from(#fff),to(hsla(0,0%,100%,0)));background:-webkit-linear-gradient(top,#fff,hsla(0,0%,100%,0));background:-o-linear-gradient(top,#fff 0,hsla(0,0%,100%,0) 100%);background:linear-gradient(180deg,#fff 0,hsla(0,0%,100%,0));z-index:10000}.scroll-fade-bottom{position:fixed;content:\"\";bottom:0;height:15px;width:100%;background:-webkit-gradient(linear,left top,left bottom,from(hsla(0,0%,100%,0)),to(#fff));background:-webkit-linear-gradient(top,hsla(0,0%,100%,0),#fff);background:-o-linear-gradient(top,hsla(0,0%,100%,0) 0,#fff 100%);background:linear-gradient(180deg,hsla(0,0%,100%,0) 0,#fff);z-index:1;display:none}.particles-canvas{position:absolute;top:0;bottom:0;left:0;right:0;z-index:-1;max-height:calc(100vh - 87.5px)}", ""]);
 
 // exports
 
@@ -2426,4 +2431,4 @@ exports.push([module.i, "body{font-family:Roboto,sans-serif;font-weight:300;font
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.57c85f7c.js.map
+//# sourceMappingURL=static.c461b2a0.js.map
