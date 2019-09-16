@@ -26,7 +26,7 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-fa1d10feaab05f8e49b2.js"
+    "url": "webpack-runtime-12035713125bd72ad7bb.js"
   },
   {
     "url": "styles.2ada322f101e73e0a5c4.css"
@@ -39,7 +39,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "67550639139018eec689d76226cc0cf2"
+    "revision": "98f652912288513f18f161e017f2f3ac"
   },
   {
     "url": "static/NexaBold-35418d8f6d04761a1df8a9e44e516bc6.otf"
