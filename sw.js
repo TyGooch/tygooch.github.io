@@ -26,23 +26,23 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-4274428b5c1589686c60.js"
+    "url": "webpack-runtime-8f6dcefc3115361da7f9.js"
   },
   {
-    "url": "styles.b58192690269dc71f56c.css"
+    "url": "styles.619ab1d6d909b9424422.css"
   },
   {
     "url": "styles-b922927d985ae309ceaf.js"
   },
   {
-    "url": "app-e160a9353c255f7d0590.js"
+    "url": "app-bc42d39d1d0d8b40caeb.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-0378106b073ddb95b95e.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "c3128290bc51b8cd6eee372360934e7a"
+    "revision": "9844bfdd7f62ec9970e95440b05998cd"
   },
   {
     "url": "static/NexaBold-35418d8f6d04761a1df8a9e44e516bc6.otf"
