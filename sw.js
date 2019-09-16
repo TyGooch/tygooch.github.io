@@ -29,7 +29,7 @@ self.__precacheManifest = [
     "url": "webpack-runtime-fa1d10feaab05f8e49b2.js"
   },
   {
-    "url": "styles.324b51a7846c907c96b2.css"
+    "url": "styles.2ada322f101e73e0a5c4.css"
   },
   {
     "url": "styles-aa69c1a23619e55de78a.js"
@@ -39,7 +39,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "5b3dd6d08d58ad02bee5cf6c17cb1f10"
+    "revision": "67550639139018eec689d76226cc0cf2"
   },
   {
     "url": "static/NexaBold-35418d8f6d04761a1df8a9e44e516bc6.otf"
