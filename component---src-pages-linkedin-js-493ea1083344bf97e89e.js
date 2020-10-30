@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{tTFp:function(n,t,o){"use strict";o.r(t);var c=o("q1tI");t.default=function(){return Object(c.useEffect)((function(){window.location.replace("https://www.linkedin.com/in/tygooch")}),[]),null}}}]);
+//# sourceMappingURL=component---src-pages-linkedin-js-493ea1083344bf97e89e.js.map
